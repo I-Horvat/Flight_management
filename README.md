@@ -81,19 +81,25 @@ This controller handles operations concerning flights, such as creation, retriev
 ## Authentication
 - Authentication is required for all actions except for retrieving flights.
 - Token-based authentication is implemented.
-# CompaniesController
+
+# BookingsController
 
 ## Description
-This controller manages operations related to companies, including creation, retrieval, updating, and deletion.
+This controller manages booking-related tasks, including booking creation, retrieval, updating, and deletion.
 
 ## Endpoints
-- **Create Company:** `POST /api/companies`
-- **Get All Companies:** `GET /api/companies`
-- **Get Company by ID:** `GET /api/companies/:id`
-- **Update Company:** `PUT /api/companies/:id`
-- **Delete Company:** `DELETE /api/companies/:id`
+- **Create Booking:** `POST /api/bookings`
+- **Get All Bookings:** `GET /api/bookings`
+- **Get Booking by ID:** `GET /api/bookings/:id`
+- **Update Booking:** `PUT /api/bookings/:id`
+- **Delete Booking:** `DELETE /api/bookings/:id`
+- **Get User Bookings:** `GET /api/users/:user_id/bookings`
+- **Get Flight Bookings:** `GET /api/flights/:flight_id/bookings`
 
 ## Authentication
-- The user must be authenticated to perform all actions except for viewing companies.
+- Authentication is required for all actions except for retrieving bookings.
 - Token-based authentication is used.
-
+- Users can only view their bookings.
+- Admins can view all bookings.
+- Users can only update and delete their bookings.
+- Admins can update and delete any booking.
