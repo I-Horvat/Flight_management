@@ -29,6 +29,7 @@ gem 'rubocop'
 gem 'rubocop-rails'
 gem 'rubocop-rspec'
 gem 'shoulda-matchers'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
